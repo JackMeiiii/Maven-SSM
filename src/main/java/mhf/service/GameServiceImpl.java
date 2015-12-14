@@ -1,5 +1,7 @@
 package mhf.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Required;
 import org.springframework.stereotype.Service;
@@ -21,7 +23,7 @@ public class GameServiceImpl implements GameService {
 		this.gameMapper = gameMapper;
 	}
 
-	public Game getGameByLevel(int level) {
+	public int getGameByLevel(int level) {
 		return gameMapper.selectByPrimaryKey(level);
 	}
 
@@ -30,5 +32,9 @@ public class GameServiceImpl implements GameService {
 		game.setLevel(i);
 		game.setPrize(j);
 		return gameMapper.insert(game);
+	}
+
+	public List getAll() {
+		return gameMapper.getAll();
 	}
 }

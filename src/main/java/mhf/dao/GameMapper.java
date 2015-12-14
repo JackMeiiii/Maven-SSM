@@ -1,5 +1,7 @@
 package mhf.dao;
 
+import java.util.List;
+
 import mhf.bean.Game;
 
 public interface GameMapper {
@@ -9,9 +11,11 @@ public interface GameMapper {
 
     int insertSelective(Game record);
 
-    Game selectByPrimaryKey(Integer level);
+    int selectByPrimaryKey(Integer level);
 
     int updateByPrimaryKeySelective(Game record);
 
     int updateByPrimaryKey(Game record);
+
+	List getAll();
 }
