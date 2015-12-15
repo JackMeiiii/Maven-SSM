@@ -41,7 +41,7 @@ public class GameController {
 	@RequestMapping("/{level}/ShowPrize")
 	public String getPrizeByLevel(@PathVariable int level,
 			HttpServletRequest request) {
-		int prize = gameService.getGameByLevel(12);
+		int prize = gameService.getGameByLevel(level);
 		request.setAttribute("prize", prize);
 		return "ShowPrize";
 	}
