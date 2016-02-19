@@ -1,4 +1,4 @@
-package ssi;
+package ssm;
 
 import mhf.bean.Game;
 import mhf.service.GameService;
@@ -21,8 +21,8 @@ public class testGame {
 	 }
 	 @Test
 	 public void test() {
-	 Game game = gs.getGameByLevel(12);
-	 System.out.println(game);
+	 int prize = gs.getGameByLevel(12);
+	 System.out.println(prize);
 	 }
 
 //	public static void main(String[] args) {
